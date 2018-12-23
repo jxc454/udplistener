@@ -9,7 +9,7 @@ import java.util.Properties;
 class KProducer {
 
     private static Logger log = Logger.getLogger(KProducer.class.getName());
-    KafkaProducer<Integer, String> producer = null;
+    KafkaProducer<String, Integer> producer = null;
 
     KProducer(Config config) {
         this.produce(config);
