@@ -2,13 +2,14 @@ package com.cotter;
 
 import com.typesafe.config.Config;
 import org.apache.kafka.clients.producer.KafkaProducer;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.Properties;
 
 class KProducer {
+    final static Logger logger = LogManager.getLogger(App.class);
 
-    private static Logger log = Logger.getLogger(KProducer.class.getName());
     KafkaProducer<String, Integer> producer = null;
 
     KProducer(Config config) {
@@ -17,6 +18,8 @@ class KProducer {
 
     private void produce(Config config) {
         Properties props = new Properties();
+
+        logger.info("PRODUCING");
 
         props.put("bootstrap.servers", config.getString("bootstrap.servers"));
         props.put("acks", config.getString("acks"));
@@ -30,9 +33,9 @@ class KProducer {
         try {
             this.producer = new KafkaProducer<>(props);
         } catch (Exception e) {
-            log.error("Failed to start kafka producer", e);
+            logger.error("Failed to start kafka producer", e);
             throw new RuntimeException(e);
         }
-        log.info("Kafka Producer is started....");
+        logger.info("Kafka Producer started....");
     }
 }
