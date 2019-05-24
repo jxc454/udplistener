@@ -15,8 +15,6 @@ public class App {
 
     public static void main( String[] args ) throws Exception
     {
-        logger.info("IN MAIN");
-
         DatagramSocket serverSocket = new DatagramSocket(5140);
         byte[] receiveData = new byte[64000];
 
