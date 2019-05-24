@@ -11,7 +11,7 @@ import java.net.*;
 import java.util.UUID;
 
 public class App {
-    final static Logger logger = LogManager.getLogger(App.class);
+    private final static Logger logger = LogManager.getLogger(App.class);
 
     public static void main( String[] args ) throws Exception
     {
