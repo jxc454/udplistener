@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.cotter</groupId>
+  <groupId>com.github.jxc454</groupId>
   <artifactId>udp-listener</artifactId>
   <name>udp-listener</name>
   <version>1.0-SNAPSHOT</version>
@@ -20,7 +20,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>com.cotter.App</mainClass>
+                  <mainClass>com.github.jxc454.App</mainClass>
                 </transformer>
               </transformers>
             </configuration>

@@ -1,4 +1,4 @@
-package com.jxc454.udplistener;
+package com.github.jxc454.udplistener;
 
 import com.typesafe.config.Config;
 import org.apache.kafka.clients.producer.KafkaProducer;
